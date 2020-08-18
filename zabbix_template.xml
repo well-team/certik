@@ -38,4 +38,16 @@
             </items>
         </template>
     </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template_Certik_Node:certik_block_height.count(5m)}=0</expression>
+            <name>Certik Node Block Height Data</name>
+            <priority>AVERAGE</priority>
+        </trigger>
+        <trigger>
+            <expression>{Template_Certik_Node:certik_block_height.last()}&lt;={Template_Certik_Node:certik_block_height.last(#1,5m)}</expression>
+            <name>Certik Node Block Height Changing</name>
+            <priority>AVERAGE</priority>
+        </trigger>
+    </triggers>
 </zabbix_export>
