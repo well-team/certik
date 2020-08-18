@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.0</version>
+    <date>2020-08-19T01:26:08Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template_Certik_Node</template>
+            <name>Template Certik Node</name>
+            <description/>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Certik Node</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Block Height</name>
+                    <key>certik_block_height</key>
+                    <delay>30</delay>
+                    <history>30d</history>
+                    <trends>365d</trends>
+                    <applications>
+                        <application>
+                            <name>Certik Node</name>
+                        </application>
+                    </applications>
+                </item>
+            </items>
+        </template>
+    </templates>
+</zabbix_export>
